@@ -86,6 +86,34 @@ public class GestioneEsame {
         }
 
     }
+    
+    
+      
+  static String thebest () {
+        int valbest = 0;
+        int indexbest = 0;
+        for (int i = 0; i < listaVoti.length; i++) {
+            
+            if (listaVoti [i] > valbest) //caso ok
+            {
+                valbest = listaVoti [i];
+                indexbest = i;    
+            }
+        }
+        return "the best is " + listaCognomi [indexbest] + " " + listaNomi[indexbest] + " con il voto di "
+                + listaVoti [indexbest];
+ 
+  }
+  static int votothebest () {
+      int valbest = 0;
+      for (int i = 0; i < listaCognomi.length; i++) {
+          if (listaVoti [i] > valbest) //caso ok
+          {
+              valbest = listaVoti [i];
+          }
+      }
+      return valbest;
+  }
 
     private static void visTabellone() {
 
@@ -113,34 +141,4 @@ public class GestioneEsame {
         JOptionPane.showMessageDialog(null, ris);
     }
 
-
-  
-    
-  static String thebest () {
-        int valbest = 0;
-        int indexbest = 0;
-        for (int i = 0; i < listaVoti.length; i++) {
-            
-            if (listaVoti [i] > valbest) //caso ok
-            {
-                valbest = listaVoti [i];
-                indexbest = i;    
-            }
-        }
-        return "the best is " + listaCognomi [indexbest] + " " + listaNomi[indexbest] + " con il voto di "
-                + listaVoti [indexbest];
-        
-   
-    
-  }
-  static int votothebest () {
-      int valbest = 0;
-      for (int i = 0; i < listaCognomi.length; i++) {
-          if (listaVoti [i] > valbest) //caso ok
-          {
-              valbest = listaVoti [i];
-          }
-      }
-      return valbest;
-  }
 }
